@@ -2,7 +2,7 @@ Img2Mol: inferring molecules from pictures
 ==========================================
 ![Img2Mol](Img2Mol.png)
 Welcome to Img2Mol! :wave:.
-The model will be publicly available after acceptance of the final manuscript. In the meantime, you are welcome to read our [preprint](https://chemrxiv.org/articles/preprint/Img2Mol_-_Accurate_SMILES_Recognition_from_Molecular_Graphical_Depictions/14320907/1?file=27273986).
+The model will be publicly available after acceptance of the final manuscript.
 
 ## Overview
  Here we provide the implementation of the `img2mol` model using [PyTorch](https://github.com/pytorch/pytorch) and [PyTorch Lightning](https://github.com/PyTorchLightning/pytorch-lightning) for training and inference, along with an exemplary jupyter notebook.
@@ -43,7 +43,8 @@ Check the example notebook `example_inference.ipynb` to see how the inference cl
 
 ## Reference
 Please cite our manuscript if you use our model in your work.
-[1] D.-A. Clever, T. Le, R. Winter, F. Montanari, Chem. Sci., 2021, [DOI: 10.1039/D1SC01839F](https://doi.org/10.1039/D1SC01839F)
+
+D.-A. Clever, T. Le, R. Winter, F. Montanari, Chem. Sci., 2021, [DOI: 10.1039/D1SC01839F](https://doi.org/10.1039/D1SC01839F)
 
 ## Img2Mol Code License
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at https://www.apache.org/licenses/LICENSE-2.0.
