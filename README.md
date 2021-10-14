@@ -38,7 +38,8 @@ conda activate img2mol
 pip install .
 ```
 ## Download Model Weights
-You can download the trained parameters for the default model (~2.4GB) as described in our paper using the following link: https://drive.google.com/file/d/1pk21r4Zzb9ZJkszJwP9SObTlfTaRMMtF/view?usp=sharing.  
+You can download the trained parameters for the default model (~2.4GB) as described in our paper using the following link:
+<a href="https://drive.google.com/file/d/1pk21r4Zzb9ZJkszJwP9SObTlfTaRMMtF/view" target="_blank">https://drive.google.com/file/d/1pk21r4Zzb9ZJkszJwP9SObTlfTaRMMtF/view </a>.  
 Please move the downloaded file `model.ckpt` into the `model/` directory.  
 
 Alternatively, we provide a bash script that will download and move the file automatically.
