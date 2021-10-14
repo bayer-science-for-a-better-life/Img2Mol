@@ -54,7 +54,7 @@ Check the example notebook `example_inference.ipynb` to see how the inference cl
 ## Reference
 Please cite our manuscript if you use our model in your work.
 
-D.-A. Clever, T. Le, R. Winter, F. Montanari, Chem. Sci., 2021, [DOI: 10.1039/D1SC01839F](https://doi.org/10.1039/D1SC01839F)
+D.-A. Clevert, T. Le, R. Winter, F. Montanari, Chem. Sci., 2021, [DOI: 10.1039/D1SC01839F](https://doi.org/10.1039/D1SC01839F)
 
 ## Img2Mol Code License
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at https://www.apache.org/licenses/LICENSE-2.0.
