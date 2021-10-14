@@ -1,3 +1,6 @@
+model/*
+!model/.gitkeep
+
 # Editors
 .vscode/
 .idea/

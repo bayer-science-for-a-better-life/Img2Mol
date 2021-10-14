@@ -37,6 +37,16 @@ conda env create -f environment.yml
 conda activate img2mol
 pip install .
 ```
+## Download Model Weights
+You can download the trained parameters for the default model (~2.4GB) as described in our paper using the following link:
+<a href="https://drive.google.com/file/d/1pk21r4Zzb9ZJkszJwP9SObTlfTaRMMtF/view" target="_blank">https://drive.google.com/file/d/1pk21r4Zzb9ZJkszJwP9SObTlfTaRMMtF/view </a>.  
+Please move the downloaded file `model.ckpt` into the `model/` directory.  
+
+Alternatively, we provide a bash script that will download and move the file automatically.
+```bash
+bash download_model.sh
+```
+If you have problems downloading the file using the bash script, please manually download the file using the browser.
 
 ## Examples
 Check the example notebook `example_inference.ipynb` to see how the inference class can be used.
