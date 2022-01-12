@@ -9,7 +9,7 @@ You can download the tgz-file (~114MB) of the images here:
    target="_blank">https://drive.google.com/file/d/1FZxjcncEQ-aK4Gl5obepNxAJCFOcEc8W/view</a>
 
 #### STAKER
-The validation set collection of 30,000 images and molecule descriptions provided by Staker et al. The images are based on US Patent Office (USPTO) data. The image resolution is 256 × 256 px. Molecules are composed of 24 atoms on average, ranging from 7 at the minimum to 51 at the maximum. 
+The validation set collection of 30,000 images and molecule descriptions provided by Staker et al. The images are based on US Patent Office (USPTO) data. The image resolution is 256 × 256 px. Molecules are composed of 24 atoms on average, ranging from 7 at the minimum to 51 at the maximum. Please load the pickled dataframe object to get the mapping images<>smiles.
 
 You can download the tgz-file (~110MB) of the images here:
 <a href="https://drive.google.com/file/d/1rYPMSF6C7AbHubll8BZZJF2zvd7UYzp6/view"    target="_blank">https://drive.google.com/file/d/1rYPMSF6C7AbHubll8BZZJF2zvd7UYzp6/view</a>.  
