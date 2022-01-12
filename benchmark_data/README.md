@@ -1,5 +1,4 @@
-## Overview
- Here we provide the benchmark datasets that was used to evaluate the performance of Img2Mol and compare it with that of state-of-the-art molecular recognition methods. The following benchmark datasets (all 8-bit grayscale images) were used.
+Here we provide the benchmark datasets that was used to evaluate the performance of Img2Mol and compare it with that of state-of-the-art molecular recognition methods. The following benchmark datasets (all 8-bit grayscale images) were used.
  
 ### Img2Mol
 Test set collection of 25,000 images and molecule descriptions. Images were generated as described in subsection 3.3 of the paper. The resolution of the images is 224 × 224 px. Only half of our original test set is used due to the computational time of the baseline methods. The data set consists of typical small molecules with an average size of 25 atoms, ranging between 6 and 44 atoms.
