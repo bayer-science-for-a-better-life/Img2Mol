@@ -12,8 +12,8 @@ You can download the tgz-file (~102MB) here:
 A collection of 4852 images and molecule descriptions based on US Patent Office (USPTO) data, obtained from Rajan et al. The average resolution of the images is 649 × 417 px. The dataset consists of molecules with an average size of 28 atoms, ranging between 10 and 96 atoms.
 
 You can download the tgz-file (~12MB) here: 
-<a href="https://drive.google.com/file/d/1fqMg0N582ti9ij71Pbntbq6vMw8z1BJI/view" 
-   target="_blank">https://drive.google.com/file/d/1fqMg0N582ti9ij71Pbntbq6vMw8z1BJI/view</a>. 
+<a href="https://drive.google.com/file/d/15h1c50AmcJ3jCuQOdLjkVhcFkqe7slLn/view" 
+   target="_blank">https://drive.google.com/file/d/15h1c50AmcJ3jCuQOdLjkVhcFkqe7slLn/view</a>. 
 #### UoB
 5716 images and molecule descriptions of chemical structures developed by the University of Birmingham, obtained from Rajan et al. The average resolution of the images is 762 × 412 px. The molecules in this data set are quite small, consisting on average of only 13 atoms, ranging between 4 and 34 atoms.
 
