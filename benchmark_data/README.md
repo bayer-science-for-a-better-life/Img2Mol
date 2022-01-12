@@ -39,5 +39,11 @@ You can download the tgz-file (~12MB) here:
    target="_blank">https://drive.google.com/file/d/11GxOLvQn_TanDAW8u7oCvSA_FJ-SXU4F/view</a>. 
 
 
+#### Influence of the depiction libraryy
+ 
+To investigate how the rendering library (RDKit, OEChem TK, or Indigo) used to create input images affects the performance of chemical structure recognition models, we compiled the following benchmark dataset.
 
+You can download the tgz-file (~1GB) here:
+<a href="https://drive.google.com/file/d/11GxOLvQn_TanDAW8u7oCvSA_FJ-SXU4F/view" 
+   target="_blank">https://drive.google.com/file/d/11GxOLvQn_TanDAW8u7oCvSA_FJ-SXU4F/view</a>. 
 
