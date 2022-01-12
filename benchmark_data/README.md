@@ -34,16 +34,26 @@ You can download the tgz-file (~12MB) of the images here:
 #### JPO
 A collection of 365 images and molecule descriptions based on Japanese Patent Office (JPO) data, obtained from Rajan et al. Note that this data set contains many textual labels, including Japanese characters, and irregular features, including line thickness variations. In addition, some images are characterised by poor quality. The average resolution of the images is 607 × 373 px. Molecules are composed of 20 atoms on average, ranging from 5 at the minimum to 43 at the maximum.
 
-You can download the tgz-file (~12MB) here:
+You can download the tgz-file (~12MB) of the images here:
 <a href="https://drive.google.com/file/d/11GxOLvQn_TanDAW8u7oCvSA_FJ-SXU4F/view" 
    target="_blank">https://drive.google.com/file/d/11GxOLvQn_TanDAW8u7oCvSA_FJ-SXU4F/view</a>. 
 
 
-#### Influence of the depiction libraryy
+#### Influence of the depiction library
  
-To investigate how the rendering library (RDKit, OEChem TK, or Indigo) used to create input images affects the performance of chemical structure recognition models, we compiled the following benchmark dataset.
+To investigate how the rendering library (RDKit, OEChem TK, or Indigo) used to create input images affects the performance of chemical structure recognition models, we compiled the following benchmark dataset. Please use the Img2Mol mapping information to link images to the smiles.
 
-You can download the tgz-file (~1GB) here:
-<a href="https://drive.google.com/file/d/11GxOLvQn_TanDAW8u7oCvSA_FJ-SXU4F/view" 
-   target="_blank">https://drive.google.com/file/d/11GxOLvQn_TanDAW8u7oCvSA_FJ-SXU4F/view</a>. 
+You can download the tgz-file (~1GB) of the images herere:
+<a href="https://drive.google.com/file/d/1ixGj51F5NnhRfHFydpuCBYvYKexfaX3E/view" 
+   target="_blank">https://drive.google.com/file/d/1ixGj51F5NnhRfHFydpuCBYvYKexfaX3E/view</a>. 
+
+
+#### Influence of the image resolution
+ 
+To investigate how the image resolution used to create input images affects the performance of chemical structure recognition models, we compiled the following benchmark dataset. Please use the Img2Mol mapping information to link images to the smiles.
+
+You can download the tgz-file (~2.5GB) of the images here:
+<a href="https://drive.google.com/file/d/1ixGj51F5NnhRfHFydpuCBYvYKexfaX3E/view" 
+   target="_blank">https://drive.google.com/file/d/1ixGj51F5NnhRfHFydpuCBYvYKexfaX3E/view</a>. 
+
 
