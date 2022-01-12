@@ -4,13 +4,14 @@ For the smaller benchmark datasets (USPTO, UoB, CLEF and JPO), we applied a slig
 #### Img2Mol
 Test set collection of 25,000 images and molecule descriptions. Images were generated as described in subsection 3.3 of the paper. The resolution of the images is 224 × 224 px. Only half of our original test set is used due to the computational time of the baseline methods. The data set consists of typical small molecules with an average size of 25 atoms, ranging between 6 and 44 atoms.
 
-You can download the tgz-file (~102MB) here:
-<a href="https://drive.google.com/file/d/1rYPMSF6C7AbHubll8BZZJF2zvd7UYzp6/view"    target="_blank">https://drive.google.com/file/d/1rYPMSF6C7AbHubll8BZZJF2zvd7UYzp6/view</a>.  
+You can download the tgz-file (~114MB) here:
+<a href="https://drive.google.com/file/d/1FZxjcncEQ-aK4Gl5obepNxAJCFOcEc8W/view"    
+   target="_blank">https://drive.google.com/file/d/1FZxjcncEQ-aK4Gl5obepNxAJCFOcEc8W/view</a>.  
 
 #### STAKER
 The validation set collection of 30,000 images and molecule descriptions provided by Staker et al. The images are based on US Patent Office (USPTO) data. The image resolution is 256 × 256 px. Molecules are composed of 24 atoms on average, ranging from 7 at the minimum to 51 at the maximum. 
 
-You can download the tgz-file (~102MB) here:
+You can download the tgz-file (~110MB) here:
 <a href="https://drive.google.com/file/d/1rYPMSF6C7AbHubll8BZZJF2zvd7UYzp6/view"    target="_blank">https://drive.google.com/file/d/1rYPMSF6C7AbHubll8BZZJF2zvd7UYzp6/view</a>.  
 #### USPTO
 A collection of 4852 images and molecule descriptions based on US Patent Office (USPTO) data, obtained from Rajan et al. The average resolution of the images is 649 × 417 px. The dataset consists of molecules with an average size of 28 atoms, ranging between 10 and 96 atoms.
