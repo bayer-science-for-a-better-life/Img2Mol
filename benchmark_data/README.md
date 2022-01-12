@@ -41,7 +41,7 @@ You can download the tgz-file (~12MB) of the images here:
 
 #### Influence of the depiction library
  
-To investigate how the rendering library (RDKit, OEChem TK, or Indigo) used to create input images affects the performance of chemical structure recognition models, we compiled the following benchmark dataset. Please use the Img2Mol mapping information to link images to the smiles.
+To investigate how the rendering library (RDKit, OEChem TK, or Indigo) used to create input images affects the performance of chemical structure recognition models, we compiled the following benchmark dataset. A subset of 5000 compounds from the Img2Mol test set depicted each five times by each of the three libraries. Please use the Img2Mol mapping information to link images to the smiles.
 
 You can download the tgz-file (~1GB) of the images herere:
 <a href="https://drive.google.com/file/d/1ixGj51F5NnhRfHFydpuCBYvYKexfaX3E/view" 
@@ -50,10 +50,10 @@ You can download the tgz-file (~1GB) of the images herere:
 
 #### Influence of the image resolution
  
-To investigate how the image resolution used to create input images affects the performance of chemical structure recognition models, we compiled the following benchmark dataset. Please use the Img2Mol mapping information to link images to the smiles.
+To investigate how the image resolution used to create input images affects the performance of chemical structure recognition models, we compiled the following benchmark dataset.  A subset of 5000 compounds from the Img2Mol test set depicted each five times with 256, 512, 1024 and 2048 px resolution. Please use the Img2Mol mapping information to link images to the smiles. 
 
 You can download the tgz-file (~2.5GB) of the images here:
-<a href="https://drive.google.com/file/d/1ixGj51F5NnhRfHFydpuCBYvYKexfaX3E/view" 
-   target="_blank">https://drive.google.com/file/d/1ixGj51F5NnhRfHFydpuCBYvYKexfaX3E/view</a>. 
+<a href="https://drive.google.com/file/d/1uMZ2FGNON4k6vxrldkEJZPRbyrISNR6K/view" 
+   target="_blank">https://drive.google.com/file/d/1uMZ2FGNON4k6vxrldkEJZPRbyrISNR6K/view</a>. 
 
 
