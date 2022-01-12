@@ -12,8 +12,15 @@ A collection of 4852 images and molecule descriptions based on US Patent Office 
 5716 images and molecule descriptions of chemical structures developed by the University of Birmingham, obtained from Rajan et al. The average resolution of the images is 762 × 412 px. The molecules in this data set are quite small, consisting on average of only 13 atoms, ranging between 4 and 34 atoms.
 #### CLEF 
 A collection of 711 images and molecule descriptions based on the Conference and Labs of the Evaluation Forum (CLEF) test set, obtained from Rajan et al. The average resolution of the images is 1243 × 392 px. The dataset consists of molecules with an average size of 26 atoms, ranging between 4 and 42 atoms.
+You can download the tgz-file (~12MB) <a href="here" 
+   target="_blank">https://drive.google.com/file/d/1fqMg0N582ti9ij71Pbntbq6vMw8z1BJI/view</a>. 
 #### JPO
 A collection of 365 images and molecule descriptions based on Japanese Patent Office (JPO) data, obtained from Rajan et al. Note that this data set contains many textual labels, including Japanese characters, and irregular features, including line thickness variations. In addition, some images are characterised by poor quality. The average resolution of the images is 607 × 373 px. Molecules are composed of 20 atoms on average, ranging from 5 at the minimum to 43 at the maximum.
+You can download the tgz-file (~12MB) here:
+<a href="https://drive.google.com/file/d/11GxOLvQn_TanDAW8u7oCvSA_FJ-SXU4F/view" 
+   target="_blank">https://drive.google.com/file/d/11GxOLvQn_TanDAW8u7oCvSA_FJ-SXU4F/view</a>. 
+
+
 
 
 For the smaller benchmark datasets (USPTO, UoB, CLEF and JPO), we applied a slight input perturbation by adding rotation (randomly drawn from [−5°, 5°]) and shearing (xy-shearing factor randomly drawn from [−0.1, 0.1]). Every input image of those benchmarks is perturbed five times randomly. This is done in order to detect potential overfitting of the baseline methods to those small, well known datasets.
