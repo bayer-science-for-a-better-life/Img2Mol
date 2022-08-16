@@ -1,0 +1,15 @@
+name: cddd
+
+channels:
+  - rdkit
+  - defaults
+
+dependencies:
+  - python=3.6
+  - numpy<=1.14.5
+  - pandas<=1.0.3
+  - rdkit
+  - scikit-learn
+  - pip:
+    - https://github.com/jrwnter/cddd/archive/refs/tags/1.0.tar.gz
+    - tensorflow==1.10.1
