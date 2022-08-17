@@ -12,6 +12,7 @@ This repository is organized as follows:
 * `model/`: stores the trained model weights as pickled files. The download-link will be provided in future soon
 
 ## Installation
+If you are working with Windows, we recommend using the Windows Subsystem for Linux (WSL).
 
 #### Environment
 Create a new environment:
@@ -20,12 +21,10 @@ git clone git@github.com:bayer-science-for-a-better-life/Img2Mol.git
 cd Img2Mol
 conda env create -f environment.yml
 conda activate img2mol
-pip install .
 ```
 ## Download Model Weights
 * [Download and unzip the CDDD model](https://drive.google.com/u/0/uc?id=1oyknOulq_j0w9kzOKKIHdTLo5HphT99h&export=download)
 * Move the directory *default_model* to `path/to/anaconda3/envs/img2mol/lib/python3.6/site-packages/cddd/data/`
-
 
 * [Download the img2mol model here](https://drive.google.com/file/d/1pk21r4Zzb9ZJkszJwP9SObTlfTaRMMtF/view)
 
