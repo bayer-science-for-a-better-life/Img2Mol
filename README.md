@@ -44,7 +44,7 @@ If you have problems downloading the file using the bash script, please manually
 * device (str): Device used for inference (defaults to `"cuda:0" if torch.cuda.is_available() else "cpu"`,
 * local_cddd (bool): Indicates whether or not to use the local cddd installation (Defaults to `False`)
 
-**An instanciated Img2MolInference object can be called with the path of an image to run determine the SMILES representation of the depicted molecule**
+**An instanciated Img2MolInference object can be called with the path of an image to determine the SMILES representation of the depicted molecule**
 ```
 from img2mol.inference import *
 
