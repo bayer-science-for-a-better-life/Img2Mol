@@ -48,7 +48,7 @@ If you have problems downloading the file using the bash script, please manually
 from img2mol.inference import *
 
 img2mol = Img2MolInference(local_cddd=True)
-result = img2mol(filepath="examples/digital_example1.png")
+result = img2mol(filepath="path/to/image.png")
 ```
 
 **Check the example notebook `example_inference.ipynb` to see how the inference class can be used.**
