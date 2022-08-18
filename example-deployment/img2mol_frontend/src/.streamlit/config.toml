@@ -1,0 +1,15 @@
+[server]
+enableCORS = false
+enableXsrfProtection = false
+enableWebsocketCompression = true
+
+port = 8000
+maxUploadSize = 10
+
+baseUrlPath = "img2mol"
+
+
+[browser]
+gatherUsageStats = false
+serverPort = 8000
+
