@@ -40,7 +40,7 @@ If you have problems downloading the file using the bash script, please manually
 ### Usage
 **The Img2MolInference object is instanciated with three parameters:**
 * model_ckpt (str ): Model path (defaults to None) - If it is not specified, the model file is assumed to be placed in `path/to/anaconda3/envs/img2mol/lib/python3.6/site-packages/cddd/model/`
-* device (str): Device used for inference (defaults to `"cuda:0" if torch.cuda.is_available() else "cpu"`,
+* device (str): Device used for inference (defaults to `"cuda:0" if torch.cuda.is_available() else "cpu"`)
 * local_cddd (bool): Indicates whether or not to use the local cddd installation (Defaults to `False`)
 
 **An instanciated Img2MolInference object can be called with the path of an image to determine the SMILES representation of the depicted molecule**
