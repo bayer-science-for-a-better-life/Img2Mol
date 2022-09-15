@@ -25,11 +25,12 @@ from img2mol.cddd_server import CDDDRequest
 
 from rdkit import Chem
 
-# CDDD import only works if the suitable environment has been installed
 import warnings
-warnings.filterwarnings("ignore", category=FutureWarning)
+# CDDD import only works if the suitable environment has been installed
 try:
-    from cddd.inference import InferenceModel as CDDDInferenceModel
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore", FutureWarning)
+        from cddd.inference import InferenceModel as CDDDInferenceModel
 except ImportError:
     print("Local CDDD installation has not been found.")
 
