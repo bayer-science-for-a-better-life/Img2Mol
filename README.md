@@ -43,6 +43,8 @@ You can download the trained parameters for the default model (~2.4GB) as descri
 <a href="https://drive.google.com/file/d/1pk21r4Zzb9ZJkszJwP9SObTlfTaRMMtF/view" target="_blank">https://drive.google.com/file/d/1pk21r4Zzb9ZJkszJwP9SObTlfTaRMMtF/view </a>.  
 Please move the downloaded file `model.ckpt` into the `model/` directory.  
 
+If you are working with the local CDDD installation, please * [download and unzip the CDDD model](https://drive.google.com/u/0/uc?id=1oyknOulq_j0w9kzOKKIHdTLo5HphT99h&export=download) and ove the directory *default_model* to `path/to/anaconda3/envs/img2mol/lib/python3.6/site-packages/cddd/data/`
+
 Alternatively, we provide a bash script that will download and move the file automatically.
 ```bash
 bash download_model.sh
