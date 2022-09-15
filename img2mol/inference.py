@@ -50,7 +50,7 @@ class Img2MolInference(object):
         self,
         model_ckpt: Optional[str] = None,
         device: str = "cuda:0" if torch.cuda.is_available() else "cpu",
-        local_cddd: bool = False
+        local_cddd: bool = None
     ):
         super(Img2MolInference, self).__init__()
         if local_cddd:
@@ -64,18 +64,6 @@ class Img2MolInference(object):
         if model_ckpt is not None:
             print(f"Loading checkpoint: {model_ckpt}")
             self.model = self.model.load_from_checkpoint(model_ckpt)
-        else:
-            # Model path in package_dir
-            model_path = os.path.join(os.path.split(__file__)[0],
-                                      'model',
-                                      'model.ckpt')
-            if os.path.exists(model_path):
-                print(f"Loading checkpoint: {model_path}")
-                self.model = self.model.load_from_checkpoint(model_path)
-            else:
-                raise FileNotFoundError(
-                    "1", "Please download the img2mol model from",
-                    f"https://drive.google.com/file/d/1pk21r4Zzb9ZJkszJwP9SObTlfTaRMMtF/view and save it at {model_path}")
 
         print("Setting to `self.eval()`-mode.")
         self.model.eval()
