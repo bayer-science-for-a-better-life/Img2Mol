@@ -3,6 +3,7 @@ Img2Mol: inferring molecules from pictures
 ![Img2Mol](Img2Mol.png)
 Welcome to Img2Mol! :wave:.
 
+
 ## Overview
  Here we provide the implementation of the `img2mol` model using [PyTorch](https://github.com/pytorch/pytorch) and [PyTorch Lightning](https://github.com/PyTorchLightning/pytorch-lightning) for training and inference, along with an exemplary jupyter notebook.
  
@@ -12,7 +13,20 @@ This repository is organized as follows:
 * `model/`: stores the trained model weights as pickled files. The download-link will be provided in future soon
 
 ## Installation
-If you are working with Windows, we recommend using the Windows Subsystem for Linux (WSL).
+#### Requirements
+```
+python=3.8.5
+pip=20.2.4
+notebook=6.4.2
+pillow=8.0.1
+numpy=1.19.2
+rdkit=2020.03.1
+cudatoolkit=11.0
+torchvision=0.8.0
+torchaudio=0.7.0
+pytorch=1.7.0
+pytorch-lightning=1.0.8
+```
 
 #### Environment
 Create a new environment:
@@ -21,37 +35,22 @@ git clone git@github.com:bayer-science-for-a-better-life/Img2Mol.git
 cd Img2Mol
 conda env create -f environment.yml
 conda activate img2mol
+pip install .
 ```
+*If you want to run Img2Mol as a standalone version with a locally loaded CDDD model instead of sending requests to our CDDD server, install the environment from `environment.local-cddd.yml` instead of `environment.yml`*
 ## Download Model Weights
-* [Download and unzip the CDDD model](https://drive.google.com/u/0/uc?id=1oyknOulq_j0w9kzOKKIHdTLo5HphT99h&export=download)
-* Move the directory *default_model* to `path/to/anaconda3/envs/img2mol/lib/python3.6/site-packages/cddd/data/`
+You can download the trained parameters for the default model (~2.4GB) as described in our paper using the following link:
+<a href="https://drive.google.com/file/d/1pk21r4Zzb9ZJkszJwP9SObTlfTaRMMtF/view" target="_blank">https://drive.google.com/file/d/1pk21r4Zzb9ZJkszJwP9SObTlfTaRMMtF/view </a>.  
+Please move the downloaded file `model.ckpt` into the `model/` directory.  
 
-* [Download the img2mol model here](https://drive.google.com/file/d/1pk21r4Zzb9ZJkszJwP9SObTlfTaRMMtF/view)
-
-* Move the downloaded file *model.ckpt* into the `path/to/anaconda3/envs/img2mol/lib/python3.6/site-packages/cddd/model/` directory.  
-
-Alternatively, we provide a bash script that will download and move the file automatically (it still needs to be copied to the package directory).
+Alternatively, we provide a bash script that will download and move the file automatically.
 ```bash
 bash download_model.sh
 ```
 If you have problems downloading the file using the bash script, please manually download the file using the browser.
 
 ## Examples
-### Usage
-**The Img2MolInference object is instanciated with three parameters:**
-* model_ckpt (str ): Model path (defaults to None) - If it is not specified, the model file is assumed to be placed in `path/to/anaconda3/envs/img2mol/lib/python3.6/site-packages/cddd/model/`
-* device (str): Device used for inference (defaults to `"cuda:0" if torch.cuda.is_available() else "cpu"`)
-* local_cddd (bool): Indicates whether or not to use the local cddd installation (Defaults to `False`)
-
-**An instanciated Img2MolInference object can be called with the path of an image to determine the SMILES representation of the depicted molecule**
-```
-from img2mol.inference import *
-
-img2mol = Img2MolInference(local_cddd=True)
-result = img2mol(filepath="path/to/image.png")
-```
-
-**Check the example notebook `example_inference.ipynb` to see how the inference class can be used.**
+Check the example notebook `example_inference.ipynb` to see how the inference class can be used. A demonstration of the usage with the usage with the local CDDD model is demonstrated in `example_inference_local_cddd.ipynb`.
 
 ## Reference
 Please cite our manuscript if you use our model in your work.
