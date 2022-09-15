@@ -12,13 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import warnings
-warnings.filterwarnings("ignore", category=FutureWarning)
-
 import torch
 from torchvision import transforms
 
-import os
 from typing import Optional
 import random
 import numpy as np
@@ -27,10 +23,15 @@ from PIL import Image, ImageOps, ImageEnhance
 from img2mol.model import Img2MolPlModel
 from img2mol.cddd_server import CDDDRequest
 
-from cddd.inference import InferenceModel as CDDDInferenceModel
-
 from rdkit import Chem
 
+# CDDD import only works if the suitable environment has been installed
+import warnings
+warnings.filterwarnings("ignore", category=FutureWarning)
+try:
+    from cddd.inference import InferenceModel as CDDDInferenceModel
+except ImportError:
+    print("Local CDDD installation has not been found.")
 
 
 """
@@ -56,8 +57,7 @@ class Img2MolInference(object):
         if local_cddd:
             self.cddd_inference_model = CDDDInferenceModel()
         else:
-            self.cddd_inference_model = False
-            self.cddd_server = CDDDRequest()
+            self.cddd_inference_model = None
         self.device = device
         print("Initializing Img2Mol Model with random weights.")
         self.model = Img2MolPlModel()
@@ -129,6 +129,7 @@ class Img2MolInference(object):
 
     def __call__(self,
                  filepath: str,
+                 cddd_server: CDDDRequest = None,
                  return_cddd: bool = False,
                  ) -> dict:
         images = self.read_image_to_tensor(filepath, repeats=50)
@@ -141,7 +142,7 @@ class Img2MolInference(object):
         if self.cddd_inference_model:
             smiles = self.cddd_inference_model.emb_to_seq(cddd)
         else:
-            smiles = self.cddd_server.cddd_to_smiles(cddd.tolist())
+            smiles = cddd_server.cddd_to_smiles(cddd.tolist())
         mol = Chem.MolFromSmiles(smiles, sanitize=True)
         # if the molecule is valid, i.e. can be parsed with the rdkit
         if mol:
