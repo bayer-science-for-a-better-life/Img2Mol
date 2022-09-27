@@ -1,0 +1,27 @@
+name: img2mol
+
+channels:
+  - rdkit
+  - pytorch
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.6
+  - pip=20.2.4
+  - pandas<=1.0.3
+  - notebook=6.4.2
+  - pillow=8.0.1
+  - scikit-learn
+  - rdkit=2020.03.1
+  - cudatoolkit=11.0
+  - torchvision=0.8.0
+  - torchaudio=0.7.0
+  - pytorch=1.7.0
+  - pytorch-lightning=1.0.8
+  - pip:
+    - https://github.com/jrwnter/cddd/archive/refs/tags/1.0.tar.gz
+    - tensorflow==1.10.1
+    - tensorboard==1.15
+    - numpy==1.19.2
+    - .

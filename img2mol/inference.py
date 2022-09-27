@@ -15,16 +15,25 @@
 import torch
 from torchvision import transforms
 
-from rdkit import Chem
-
 from typing import Optional
 import random
 import numpy as np
-
 from PIL import Image, ImageOps, ImageEnhance
 
 from img2mol.model import Img2MolPlModel
 from img2mol.cddd_server import CDDDRequest
+
+from rdkit import Chem
+
+import warnings
+# CDDD import only works if the suitable environment has been installed
+try:
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore", FutureWarning)
+        from cddd.inference import InferenceModel as CDDDInferenceModel
+except ImportError:
+    print("Local CDDD installation has not been found.")
+
 
 """
 Inference Class for Img2Mol Model.
@@ -39,8 +48,17 @@ class Img2MolInference(object):
     """
     Inference Class
     """
-    def __init__(self, model_ckpt: Optional[str] = None, device: str = "cpu"):
+    def __init__(
+        self,
+        model_ckpt: Optional[str] = None,
+        device: str = "cuda:0" if torch.cuda.is_available() else "cpu",
+        local_cddd: bool = None
+    ):
         super(Img2MolInference, self).__init__()
+        if local_cddd:
+            self.cddd_inference_model = CDDDInferenceModel()
+        else:
+            self.cddd_inference_model = None
         self.device = device
         print("Initializing Img2Mol Model with random weights.")
         self.model = Img2MolPlModel()
@@ -105,13 +123,14 @@ class Img2MolInference(object):
         if not extension:
             return "Image must be jpg or png format!"
         image = self.read_imagefile(filepath)
-        images = torch.cat([torch.unsqueeze(self.transform_image(image), 0) for _ in range(repeats)], dim=0)
+        images = torch.cat([torch.unsqueeze(self.transform_image(image), 0)
+                            for _ in range(repeats)], dim=0)
         images = images.to(self.device)
-
         return images
 
-    def __call__(self, filepath: str,
-                 cddd_server: CDDDRequest,
+    def __call__(self,
+                 filepath: str,
+                 cddd_server: CDDDRequest = None,
                  return_cddd: bool = False,
                  ) -> dict:
         images = self.read_image_to_tensor(filepath, repeats=50)
@@ -121,7 +140,10 @@ class Img2MolInference(object):
         # take the median cddd prediction out of `repeats` predictions
         cddd = np.median(cddd, axis=0)
 
-        smiles = cddd_server.cddd_to_smiles(cddd.tolist())
+        if self.cddd_inference_model:
+            smiles = self.cddd_inference_model.emb_to_seq(cddd)
+        else:
+            smiles = cddd_server.cddd_to_smiles(cddd.tolist())
         mol = Chem.MolFromSmiles(smiles, sanitize=True)
         # if the molecule is valid, i.e. can be parsed with the rdkit
         if mol:
@@ -139,12 +161,10 @@ class Img2MolInference(object):
                 "cddd": cddd, "smiles": can_smiles, "mol": can_mol
                 }
 
-
     def predict(self, filepath: str,
                 cddd_server: CDDDRequest,
                 return_cddd: bool = False) -> dict:
         return self.__call__(filepath, cddd_server, return_cddd)
-
 
 
 if __name__ == "__main__":
@@ -152,7 +172,6 @@ if __name__ == "__main__":
     device = "cuda:0" if torch.cuda.is_available() else "cpu"
     img2mol = Img2MolInference(model_ckpt=None,
                                device=device)
-
     cddd_server = CDDDRequest(host="http://ec2-18-157-240-87.eu-central-1.compute.amazonaws.com")
 
     example = "examples/example1.png"
