@@ -3,6 +3,7 @@ Img2Mol: inferring molecules from pictures
 ![Img2Mol](Img2Mol.png)
 Welcome to Img2Mol! :wave:.
 
+:point_right: For the Img2Mol web app switch to the "deployment-example" branch.
 
 ## Overview
  Here we provide the implementation of the `img2mol` model using [PyTorch](https://github.com/pytorch/pytorch) and [PyTorch Lightning](https://github.com/PyTorchLightning/pytorch-lightning) for training and inference, along with an exemplary jupyter notebook.
